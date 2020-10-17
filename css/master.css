@@ -219,6 +219,7 @@ body {
   text-align: center;
   overflow: hidden;
   border-top: 5px solid #e62b1e;
+  height: calc(55vh + 8vw + 100px);
 }
 
 .logo {
