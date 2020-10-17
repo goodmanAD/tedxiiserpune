@@ -1,11 +1,11 @@
 function headerSizeUpdate() {
   var header = document.getElementsByClassName('header')[0];
-  var menu=document.getElementsByClassName('menu')[0];
+  var menu = document.getElementsByClassName('menu')[0];
   var rect1 = header.getBoundingClientRect();
   var rect2 = menu.getBoundingClientRect();
   if (rect1.bottom - rect2.bottom < 50)
   {
-    header.style.height = rect2.bottom+50px;
+    header.style.height = (String(rect2.bottom+50)).concat("px");
   }
 }
 
