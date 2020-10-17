@@ -141,7 +141,7 @@
   top: 19vh;
 }
 
-@media only screen and (max-aspect-ratio: 1) {
+@media only screen and (max-aspect-ratio: 1/1) {
   .circle {
     width: 25vw;
     height: 25vw;
@@ -561,7 +561,11 @@ body {
   font-family: 'Commissioner', sans-serif;
   font-size: calc(8px + 2vw);
   transition: background-color 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 
 .menu-btn:hover {
   background-color: #e62b1e;
@@ -569,7 +573,7 @@ body {
 }
 
 
-@media only screen and (min-aspect-ratio: 1) {
+@media only screen and (min-aspect-ratio: 1/1) {
   .menu {
     flex-flow: row;
   }
@@ -580,6 +584,8 @@ body {
     font-size: calc(8px + 1vw);
   }
 }
+
+
 .streak {
   background-image: linear-gradient(to right, #caedff, rgba(0, 0, 0, 0));
   height: 1vw;
