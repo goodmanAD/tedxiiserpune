@@ -23,19 +23,19 @@ document.addEventListener("DOMContentLoaded", ()=>{
             context.fillStyle = (num<t) ? ("rgb(" + num*0.8 + "," + num*0.9 + "," + num + ")"):("#e62b1e");
             context.fill();
           }
-          if (w-((i*123 + j)%w) < radius) {
+          else if (w-((i*123 + j)%w) < radius) {
             context.beginPath();
             context.arc(w-(i*123 + j)%w, (j*123)%h, radius, 0, 2*Math.PI);
             context.fillStyle = (num<t) ? ("rgb(" + num*0.8 + "," + num*0.9 + "," + num + ")"):("#e62b1e");
             context.fill();
           }
-          if ((j*123)%h < radius) {
+          else if ((j*123)%h < radius) {
             context.beginPath();
             context.arc((i*123 + j)%w, h+(j*123)%h, radius, 0, 2*Math.PI);
             context.fillStyle = (num<t) ? ("rgb(" + num*0.8 + "," + num*0.9 + "," + num + ")"):("#e62b1e");
             context.fill();
           }
-          if (h-((j*123)%h) < radius) {
+          else if (h-((j*123)%h) < radius) {
             context.beginPath();
             context.arc((i*123 + j)%w, h-(j*123)%h, radius, 0, 2*Math.PI);
             context.fillStyle = (num<t) ? ("rgb(" + num*0.8 + "," + num*0.9 + "," + num + ")"):("#e62b1e");
