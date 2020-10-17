@@ -28,10 +28,27 @@
   background-color: #959595;
   margin: 0;
   padding: 0;
+
   animation-name: loaded;
   animation-play-state: paused;
   animation-timing-function: ease-in;
   animation-duration: 0.5s;
+
+  -webkit-animation-name: loaded;
+  -webkit-animation-play-state: paused;
+  -webkit-animation-timing-function: ease-in;
+  -webkit-animation-duration: 0.5s;
+
+  -moz-animation-name: loaded;
+  -moz-animation-play-state: paused;
+  -moz-animation-timing-function: ease-in;
+  -moz-animation-duration: 0.5s;
+
+  -o-animation-name: loaded;
+  -o-animation-play-state: paused;
+  -o-animation-timing-function: ease-in;
+  -o-animation-duration: 0.5s;
+
   z-index: 100;
 }
 
@@ -47,6 +64,18 @@
   animation-name: pulse;
   animation-duration: 2s;
   animation-iteration-count: infinite;
+
+  -o-animation-name: pulse;
+  -o-animation-duration: 2s;
+  -o-animation-iteration-count: infinite;
+
+  -webkit-animation-name: pulse;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+
+  -moz-animation-name: pulse;
+  -moz-animation-duration: 2s;
+  -moz-animation-iteration-count: infinite;
 }
 
 .translucent::before {
@@ -64,6 +93,21 @@
   animation-duration: 10s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
+
+  -webkit-animation-name: bgMove;
+  -webkit-animation-duration: 10s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+
+  -moz-animation-name: bgMove;
+  -moz-animation-duration: 10s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: ease-in-out;
+
+  -o-animation-name: bgMove;
+  -o-animation-duration: 10s;
+  -o-animation-iteration-count: infinite;
+  -o-animation-timing-function: ease-in-out;
 }
 
 .circle {
@@ -72,6 +116,18 @@
   animation-name: pulse;
   animation-duration: 2s;
   animation-iteration-count: infinite;
+
+  -webkit-animation-name: pulse;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+
+  -moz-animation-name: pulse;
+  -moz-animation-duration: 2s;
+  -moz-animation-iteration-count: infinite;
+
+  -o-animation-name: pulse;
+  -o-animation-duration: 2s;
+  -o-animation-iteration-count: infinite;
 }
 
 .translucent {
@@ -92,6 +148,18 @@
     animation-name: pulseDesktop;
     animation-duration: 2;
     animation-iteration-count: infinite;
+
+    -webkit-animation-name: pulseDesktop;
+    -webkit-animation-duration: 2;
+    -webkit-animation-iteration-count: infinite;
+
+    -moz-animation-name: pulseDesktop;
+    -moz-animation-duration: 2;
+    -moz-animation-iteration-count: infinite;
+
+    -o-animation-name: pulseDesktop;
+    -o-animation-duration: 2;
+    -o-animation-iteration-count: infinite;
   }
 
   .translucent {
@@ -116,10 +184,63 @@ body {
   animation-duration: 10s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
+
+  -webkit-animation-name: bgMove;
+  -webkit-animation-duration: 10s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+
+  -moz-animation-name: bgMove;
+  -moz-animation-duration: 10s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: ease-in-out;
+
+  -o-animation-name: bgMove;
+  -o-animation-duration: 10s;
+  -o-animation-iteration-count: infinite;
+  -o-animation-timing-function: ease-in-out;
+
   z-index: 100;
 }
 
 @keyframes bgMove {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: -500px 500px;
+    }
+    100% {
+      background-position: 0px 1000px;
+    }
+}
+
+
+@-o-keyframes bgMove {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: -500px 500px;
+    }
+    100% {
+      background-position: 0px 1000px;
+    }
+}
+
+@-moz-keyframes bgMove {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: -500px 500px;
+    }
+    100% {
+      background-position: 0px 1000px;
+    }
+}
+
+@-webkit-keyframes bgMove {
     0% {
       background-position: 0 0;
     }
@@ -136,6 +257,18 @@ body {
   animation-name: pulseTranslate;
   animation-duration: 2s;
   animation-iteration-count: infinite;
+
+  -webkit-animation-name: pulseTranslate;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+
+  -moz-animation-name: pulseTranslate;
+  -moz-animation-duration: 2s;
+  -moz-animation-iteration-count: infinite;
+
+  -o-animation-name: pulseTranslate;
+  -o-animation-duration: 2s;
+  -o-animation-iteration-count: infinite;
 }
 
 @keyframes pulseDesktop {
@@ -185,6 +318,171 @@ body {
 }
 
 @keyframes loaded {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -100vh;
+  }
+}
+
+@-webkit-keyframes pulseDesktop {
+  0% {
+    width: 25vw;
+    height: 25vw;
+  }
+  60% {
+    width: 27vw;
+    height: 27vw;
+  }
+  100% {
+    width: 25vw;
+    height: 25vw;
+  }
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    width: 25vh;
+    height: 25vh;
+  }
+  60% {
+
+    width: 27vh;
+    height: 27vh;
+  }
+  100% {
+    width: 25vh;
+    height: 25vh;
+  }
+}
+
+@-webkit-keyframes pulseTranslate {
+  0% {
+    transform: translateY(0);
+    transform: rotate(0);
+  }
+  60% {
+    transform: translateY(-0.5vh);
+    transform: rotate(0);
+  }
+  100% {
+    transform: translateY(0);
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes loaded {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -100vh;
+  }
+}
+
+@-moz-keyframes pulseDesktop {
+  0% {
+    width: 25vw;
+    height: 25vw;
+  }
+  60% {
+    width: 27vw;
+    height: 27vw;
+  }
+  100% {
+    width: 25vw;
+    height: 25vw;
+  }
+}
+
+@-moz-keyframes pulse {
+  0% {
+    width: 25vh;
+    height: 25vh;
+  }
+  60% {
+
+    width: 27vh;
+    height: 27vh;
+  }
+  100% {
+    width: 25vh;
+    height: 25vh;
+  }
+}
+
+@-moz-keyframes pulseTranslate {
+  0% {
+    transform: translateY(0);
+    transform: rotate(0);
+  }
+  60% {
+    transform: translateY(-0.5vh);
+    transform: rotate(0);
+  }
+  100% {
+    transform: translateY(0);
+    transform: rotate(360deg);
+  }
+}
+
+@-moz-keyframes loaded {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -100vh;
+  }
+}
+
+@-o-keyframes pulseDesktop {
+  0% {
+    width: 25vw;
+    height: 25vw;
+  }
+  60% {
+    width: 27vw;
+    height: 27vw;
+  }
+  100% {
+    width: 25vw;
+    height: 25vw;
+  }
+}
+
+@-o-keyframes pulse {
+  0% {
+    width: 25vh;
+    height: 25vh;
+  }
+  60% {
+
+    width: 27vh;
+    height: 27vh;
+  }
+  100% {
+    width: 25vh;
+    height: 25vh;
+  }
+}
+
+@-o-keyframes pulseTranslate {
+  0% {
+    transform: translateY(0);
+    transform: rotate(0);
+  }
+  60% {
+    transform: translateY(-0.5vh);
+    transform: rotate(0);
+  }
+  100% {
+    transform: translateY(0);
+    transform: rotate(360deg);
+  }
+}
+
+@-o-keyframes loaded {
   0% {
     top: 0;
   }
@@ -469,7 +767,7 @@ body {
   background-color: #878787;
 }
 
-@media (min-width: 800px) {
+@media only screen and (min-width: 800px) {
   .about-text {
     flex: 90%;
   }
@@ -524,7 +822,7 @@ footer {
   justify-content: space-between;
 }
 
-@media (min-width: 850px) {
+@media only screen and (min-width: 850px) {
   .social-links {
     width: 60%;
   }
