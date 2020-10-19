@@ -3,13 +3,21 @@
 
 /* Preloader CSS */
 
-
-
+.preloader-overlay {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 100vw;
+  height: 100vh;
+  background-image: radial-gradient(rgba(10,10,10,0.2), rgba(10,10,10, 0.9));
+  z-index: 101;
+}
 
 .xLogoBox {
   width: min-content;
   margin: auto;
   position: relative;
+  z-index: 150;
 }
 
 .preloader {
@@ -20,7 +28,7 @@
 }
 
 .preloader-wrapper {
-  border: 10px solid #252525;
+  border: 10px solid #1b1b1b;
   position: fixed;
   padding:10px;
   width: calc(100vw - 20px);
@@ -54,9 +62,10 @@
 
 .circle {
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.5);
   margin: auto;
   position: relative;
+  z-index: 150;
 }
 
 .translucent {
@@ -76,6 +85,7 @@
   -moz-animation-name: pulse;
   -moz-animation-duration: 2s;
   -moz-animation-iteration-count: infinite;
+  z-index: 150;
 }
 
 .translucent::before {
@@ -108,6 +118,7 @@
   -o-animation-duration: 10s;
   -o-animation-iteration-count: infinite;
   -o-animation-timing-function: ease-in-out;
+  z-index: 150;
 }
 
 .circle {
@@ -139,6 +150,7 @@
   height: 12vh;
   position: relative;
   top: 19vh;
+  z-index: 150;
 }
 
 @media only screen and (max-aspect-ratio: 1/1) {
@@ -638,7 +650,7 @@ body {
 .event-details-text {
   color: #d4d4d4;
   padding: 10vw;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: calc(20px + 1vw);
   text-align: center;
   margin: auto;
@@ -655,7 +667,7 @@ body {
 .about-tedx-text {
   color: #d4d4d4;
   padding: 10vw;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: calc(12px + 1vw);
   margin: auto;
 }
@@ -683,9 +695,10 @@ body {
   margin: auto;
   font-family: 'Poppins', sans-serif;
   font-size: calc(7px + 2.5vw);
-  color: white;
+  color: #cccccc;
   padding-left: 40px;
   padding-right: 40px;
+  text-shadow: 0 0 10px rgba(0,0,0,0.6);
 }
 
 .theme {
@@ -694,10 +707,12 @@ body {
   margin: auto;
   font-family: 'Poppins', sans-serif;
   font-size: 10vw;
-  color: rgba(255, 255, 255, 0.78);
+  color: rgb(255, 255, 255);
   padding-left: 40px;
   padding-right: 40px;
   line-height: 1;
+  text-shadow: 0 0 5px #FFFFFF;
+  opacity: 0.76;
 }
 
 .theme-info-container {
@@ -736,7 +751,7 @@ body {
 .theme-info-text {
   text-align: justify;
   padding: 10vw;
-  font-family: 'Source Sans Pro', serif;
+  font-family: 'Roboto', serif;
   font-size: calc(10px + 2vw);
   text-shadow: 0 0 5px #FFFFFF;
 }
@@ -759,7 +774,7 @@ body {
 .about-text {
   color: black;
   padding: 10vw;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: calc(10px + 1vw);
 }
 
@@ -795,13 +810,14 @@ body {
 footer {
   background-color: #1c1c1c;
   color: white;
-  padding:70px 70px 0 70px;
-  font-family: 'Source Sans Pro', sans-serif;
+  padding:70px;
+  font-family: 'Roboto', sans-serif;
 }
 
 .footer-above {
   width: 100%;
   display: flex;
+  flex-direction: column;
 }
 
 .footer-left-col {
@@ -810,9 +826,11 @@ footer {
 }
 
 .footer-right-col {
-  width: 35%;
+  width: 100%;
+  margin-top: 45px;
   text-align: right;
-  display: none;
+  display: flex;
+  align-items: center;
 }
 
 .footer-right-col svg {
@@ -837,7 +855,12 @@ footer {
     width: 65%;
   }
   .footer-right-col {
-    display: inline;
+    margin-top: 0;
+    display: flex;
+    width: 35%;
+  }
+  .footer-above {
+    flex-direction: row;
   }
 }
 
@@ -850,9 +873,7 @@ footer {
 
 .disclaimer {
   width: 100%;
-  padding-top: 60px;
-  padding-bottom: 35px;
-  text-align: center;
+  text-align: left;
   font-size: 20px;
   color: #d7d7d7;
 }
