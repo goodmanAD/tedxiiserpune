@@ -810,7 +810,7 @@ body {
 footer {
   background-color: #1c1c1c;
   color: white;
-  padding:70px;
+  padding:70px 70px 0 70px;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -846,6 +846,14 @@ footer {
   justify-content: space-between;
 }
 
+.gc {
+  width: 100%;
+  text-align: left;
+  font-size: calc(2vw + 12px);
+  color: #e7e7e7;
+  line-height: 1.7;
+}
+
 @media only screen and (min-width: 850px) {
   .social-links {
     width: 60%;
@@ -862,6 +870,13 @@ footer {
   .footer-above {
     flex-direction: row;
   }
+  .gc {
+    width: 100%;
+    text-align: left;
+    font-size: 22px;
+    color: #e7e7e7;
+    line-height: 1.7;
+  }
 }
 
 .social-links div {
@@ -873,7 +888,8 @@ footer {
 
 .disclaimer {
   width: 100%;
-  text-align: left;
-  font-size: 20px;
-  color: #d7d7d7;
+  padding: 55px 0 25px 0;
+  text-align: center;
+  font-size: 15px;
+  color: #c7c7c7;
 }
