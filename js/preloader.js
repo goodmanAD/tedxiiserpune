@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", ()=>{
+// document.addEventListener("DOMContentLoaded", ()=>{
   var canvas = document.getElementById("acanvas");
 
   var w = canvas.width = 300;
@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
   document.getElementsByClassName('preloader')[0].style.background="url("+canvas.toDataURL()+") fixed";
   document.getElementsByClassName('translucent')[0].style.background="url("+canvas.toDataURL()+") fixed";
-});
+// });
 
 window.onload=()=>{
   setTimeout(function () {
