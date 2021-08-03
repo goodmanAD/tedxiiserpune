@@ -703,6 +703,7 @@ body {
   padding: 10vw;
   font-family: 'Roboto', sans-serif;
   font-size: calc(12px + 1vw);
+  line-height: 1.5;
   margin: auto;
 }
 
@@ -747,7 +748,7 @@ body {
   text-align: center;
   margin: auto;
   font-family: 'Poppins', sans-serif;
-  font-size: 10vw;
+  font-size: calc(10vw - 10px);
   color: rgb(255, 255, 255);
   padding-left: 40px;
   padding-right: 40px;
@@ -793,7 +794,7 @@ body {
   text-align: justify;
   padding: 7vw;
   font-family: 'Andada Pro', serif;
-  font-size: calc(5px + 2vw);
+  font-size: calc(7px + 1.7vw);
   text-shadow: 0 0 5px #FFFFFF;
 }
 
@@ -824,6 +825,7 @@ body {
   padding: 10vw;
   font-family: 'Roboto', sans-serif;
   font-size: calc(10px + 1vw);
+  line-height: 1.5;
 }
 
 .faq-text {
