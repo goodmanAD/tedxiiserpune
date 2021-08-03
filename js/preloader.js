@@ -86,5 +86,5 @@ window.onload=()=>{
     document.getElementsByClassName('preloader-wrapper')[0].addEventListener("animationend", ()=>{
       document.getElementsByClassName('preloader-wrapper')[0].style.display="none";
     });
-  }, 1);
+  }, 150);
 };
