@@ -939,8 +939,13 @@ body {
   height: 45vw;
 }
 
-.chatwee-widget {
-  height: 400px
+
+@media screen
+  and (min-device-width: 1200px)
+  and (max-device-width: 1600px) {
+    .chatwee-widget {
+      height: 400px
+    }
 }
 
 /* Footer */
