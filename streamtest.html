@@ -16,6 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Andada+Pro:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/master.css">
     <link rel="icon" href="media-content/favicon/favicon.png" sizes="32x32">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://apis.google.com/js/platform.js" async defer></script>
   </head>
   <body style="overflow-y: hidden; overflow-x: hidden">
@@ -92,6 +93,15 @@
       </div>
     </div>
     <script type="text/javascript" src="js/preloader.js"></script>
+    <script type="text/javascript">
+      function signOut() {
+        var auth2 = gapi.auth2.getAuthInstance();
+        auth2.signOut().then(function () {
+          console.log('User signed out.');
+          location.reload();
+        });
+      }
+    </script>
     <div class="content-wrapper" style="font-size: 36px; padding-right: 28px; z-index: -5">
       <div class="header" style="background-color: #111; height: auto; min-height: 35vw">
         <div class="heading" style="color: #efefef; position: relative; width: 100%; padding-top: 10vw; text-align: center; font-size: calc(15px + 5vw); font-family: 'Poppins', sans-serif;">
@@ -112,26 +122,14 @@
           </div>
         </div>
       </div>
-      <div class="" style="padding-left: 50px">
+      <div class="stream-login">
         <br><br><br>
+        <h1 class="login-text">Log in with the google account with which you registered:</h1>
         <div class="g-signin2" data-onsuccess="onSignIn"></div>
         <br>
         <br><br><br>
       </div>
-      <hr>
-      <div class="main-stream-content">
-        <div class="sign-out">
-          <a href="#" onclick="signOut();">Sign out</a>
-          <script>
-            function signOut() {
-              var auth2 = gapi.auth2.getAuthInstance();
-              auth2.signOut().then(function () {
-                console.log('User signed out.');
-              });
-            }
-          </script>
-
-        </div>
+      <div class="main-stream-content" style="display: none">
       </div>
     </div>
     <footer>
@@ -175,6 +173,7 @@
     <script type="text/javascript">
       function onSignIn(googleUser) {
         var profile = googleUser.getBasicProfile();
+        document.querySelector(".login-text").innerHTML="Loading... please wait";
         console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
         console.log('Name: ' + profile.getName());
         console.log('Image URL: ' + profile.getImageUrl());
@@ -193,6 +192,11 @@
         .then(response => response.json())
         .then((data) => {
           console.log(data)
+          document.querySelector(".header").remove();
+          document.querySelector(".stream-login").remove();
+           document.querySelector(".main-stream-content").innerHTML=data["html"];
+           document.querySelector(".main-stream-content").style.display="block";
+          $.getScript("https://chatwee-api.com/v2/script/610536accda4757d4d576342.js");
         });
       }
     </script>

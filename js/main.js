@@ -1,11 +1,17 @@
 function headerSizeUpdate() {
   var header = document.getElementsByClassName('header')[0];
   var menu = document.getElementsByClassName('menu')[0];
-  var rect1 = header.getBoundingClientRect();
-  var rect2 = menu.getBoundingClientRect();
-  if (rect1.bottom - rect2.bottom < 50)
-  {
-    header.style.height = (String(rect2.bottom+50)).concat("px");
+  if (header) {
+    var rect1 = header.getBoundingClientRect();
+  }
+  if (menu) {
+    var rect2 = menu.getBoundingClientRect();
+  }
+  if (rect1 && rect2) {
+    if (rect1.bottom - rect2.bottom < 50)
+    {
+      header.style.height = (String(rect2.bottom+50)).concat("px");
+    }
   }
 }
 
