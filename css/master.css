@@ -820,7 +820,7 @@ body {
 }
 
 
-.about-text {
+.about-text, .important-instructions {
   color: black;
   padding: 10vw;
   font-family: 'Roboto', sans-serif;
