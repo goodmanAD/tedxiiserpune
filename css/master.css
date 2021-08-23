@@ -708,7 +708,7 @@ body {
 .event-details {
   width: calc(100% - 200px);
   margin: 0 100px;
-  font: 30px 'Roboto', sans-serif;
+  font: calc(15px + 1.7vw) 'Roboto', sans-serif;
   color: #666;
   text-align: center;
 }
