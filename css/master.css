@@ -676,18 +676,85 @@ body {
 /* Event Details */
 
 
-.event-details {
+.tickets-announcement {
   width: 100%;
-  background-color: #0b0b0b;
+  background-color: #e62b1edd;
 }
 
-.event-details-text {
+.tickets-announcement-text {
   color: #d4d4d4;
   padding: 10vw;
   font-family: 'Roboto', sans-serif;
   font-size: calc(20px + 1vw);
   text-align: center;
   margin: auto;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+.online-txt-wrapper {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.online-txt {
+    display: block;
+    font: 10.5em 'VT323', monospace;
+    margin: 0 auto;
+}
+
+.event-details {
+  width: calc(100% - 200px);
+  margin: 0 100px;
+  font: 30px 'Roboto', sans-serif;
+  color: #666;
+  text-align: center;
+}
+
+.online-announcement {
+  width: 100%;
+  font: 40px 'VT323', monospace;
+  text-align: center;
+}
+
+.text-copy {
+    fill: #00010302;
+    stroke: black;
+    stroke-dasharray: 6% 29%;
+    stroke-width: 5px;
+    stroke-dashoffset: 0%;
+    animation: stroke-offset 5.5s infinite linear;
+}
+
+.text-copy:nth-child(1){
+	stroke: #4D060D;
+	animation-delay: -1;
+}
+
+.text-copy:nth-child(2){
+	stroke: #666;
+	animation-delay: -2s;
+}
+
+.text-copy:nth-child(3){
+	stroke: #333;
+	animation-delay: -3s;
+}
+
+.text-copy:nth-child(4){
+	stroke: #aaa;
+	animation-delay: -4s;
+}
+
+.text-copy:nth-child(5){
+	stroke: #e62b1e;
+	animation-delay: -5s;
+}
+
+@keyframes stroke-offset{
+	100% {stroke-dashoffset: -35%;}
 }
 
 
@@ -754,7 +821,7 @@ body {
   padding-right: 40px;
   line-height: 1;
   text-shadow: 0 0 5px #FFFFFF;
-  opacity: 0.76;
+  opacity: 0.9;
 }
 
 .theme-info-container {
@@ -773,16 +840,16 @@ body {
   position: absolute;
   width: 100%;
   background: inherit;
-  -webkit-filter: blur(5px) saturate(2) brightness(80%);
-  -moz-filter: blur(5px) brightness(80%);
-  filter: blur(5px) brightness(80%);
+  -webkit-filter: blur(3px) saturate(2) brightness(90%);
+  -moz-filter: blur(3px) brightness(90%);
+  filter: blur(3px) brightness(90%);
 }
 
 .theme-info {
   visibility: visible;
   width: 100%;
   height: calc(100% - 80px);
-  background-color: rgba(255, 255, 255, 0.75);
+  background-color: rgba(255, 255, 255, 0.8);
   position: relative;
   z-index: 10;
   text-align: center;
