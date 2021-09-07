@@ -953,67 +953,6 @@ body {
 }
 
 
-/* Stream page */
-
-.stream-login {
-  width: 80%;
-  background-color: #efefef;
-  color: #22252a;
-  padding: 10vw;
-  font-family: 'Roboto', sans-serif;
-  font-size: calc(10px + 1vw);
-  line-height: 1.5;
-}
-
-.main-stream-content {
-  width: 80%;
-  background-color: #22252a;
-  color: #efefef;
-  padding: 10vw;
-  font-family: 'Roboto', sans-serif;
-  font-size: calc(10px + 1vw);
-  line-height: 1.5;
-}
-
-.stream-welcome {
-  text-align: center;
-}
-
-.stream-logoBox {
-  position: relative;
-  height: 5vw;
-  width: 32vw;
-  margin: auto;
-}
-
-.sign-out {
-  font-size: calc(6px + 0.6vw);
-  text-align: center;
-}
-
-.sign-out-btn {
-  display: inline-block;
-  padding: 7px;
-  border: 1px black solid;
-  border-radius: 3px;
-  text-decoration: none;
-  background-color: #efefef;
-  color: black
-}
-
-.stream-video {
-  width: 80vw;
-  height: 45vw;
-}
-
-
-@media screen
-  and (min-device-width: 1200px)
-  and (max-device-width: 1600px) {
-    .chatwee-widget {
-      height: 400px
-    }
-}
 
 /* Footer */
 
