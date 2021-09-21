@@ -88,6 +88,6 @@ window.onload=()=>{
     });
   }, 0);
   setTimeout(function () {
-    document.getElementsByClassName('content-wrapper')[0].style.filter='initial';
+    document.getElementsByClassName('event-content-wrapper')[0].style.filter='initial';
   }, 10);
 };

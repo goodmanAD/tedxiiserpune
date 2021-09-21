@@ -1,7 +1,12 @@
+body {
+  background-color: black;
+  color: white
+}
+
 .navbar {
-  background-color: #F7F9FcDD;
+  background-color: #2a1a10c0;
   border-bottom: solid #aaa;
-  color: #555;
+  color: white;
   position: fixed;
   z-index: 5;
   width: 100%;
@@ -28,9 +33,10 @@
   flex-grow: 1;
 }
 
-h1 {
+h1, h2 {
   font-family: 'Poppins';
-  text-shadow: 0 0 10px #fff, 0 0 20px #fff;
+  text-shadow: 2px 2px 4px #000000;
+  /* text-shadow: 0 0 10px #fff */
 }
 
 hr {
@@ -46,11 +52,29 @@ hr {
   top: 0;
   left: 0;
   margin: 0;
-  background: linear-gradient(45deg, rgba(200, 220, 250, 0.2) 10%, transparent 10%),
+  /* box-shadow: 0 0 200px rgba(0,0,0,0.9) inset; */
+  background: radial-gradient(transparent, black);
+  /* background: linear-gradient(45deg, rgba(200, 220, 250, 0.2) 10%, transparent 10%),
     linear-gradient(65deg, transparent 70%, rgba(200, 220, 250, 0.2) 70%),
     linear-gradient(15deg, rgba(200, 220, 250, 0.2) 80%, transparent 80%),
     linear-gradient(25deg, rgba(200, 220, 250, 0.2) 30%, transparent 30%),
-    linear-gradient(-35deg, rgba(200, 220, 250, 0.2) 50%, transparent 50%);
+    linear-gradient(-35deg, rgba(200, 220, 250, 0.2) 50%, transparent 50%); */
+}
+
+.stage-bg {
+  position: absolute;
+  z-index: -2;
+  width: 200vw;
+  transform: translateX(-26%);
+  /* height: 150vh; */
+  top: 0;
+  left: 0;
+  margin: 0;
+}
+
+object {
+  position: relative;
+  z-index: -1
 }
 
 .stream-login {
@@ -64,10 +88,9 @@ hr {
 }
 
 .main-stream-content {
-  width: 80%;
+  width: 100vw;
   background-color: #0000000a;
   /* color: #efefef; */
-  padding: 10vw;
   font-family: 'Roboto', sans-serif;
   font-size: calc(10px + 1vw);
   line-height: 1.5;
@@ -83,6 +106,11 @@ hr {
   margin: 0;
 }
 
+.stream {
+  padding: 10vw;
+  position: relative;
+}
+
 .stream-welcome {
   text-align: center;
 }
@@ -94,6 +122,19 @@ hr {
   margin: auto;
 }
 
+.floor-div {
+  position:absolute;
+  bottom:0;
+  z-index: 3;
+}
+
+.floor {
+  position:absolute;
+  bottom: calc(100vw * -2.5/26.66);
+  left: -10vw;
+  width: 100vw;
+}
+
 .sign-out {
   text-align: center;
 }
@@ -102,17 +143,60 @@ hr {
   font-size: 1rem;
   display: inline-block;
   text-decoration: none;
-  color: black;
+  color: #eee;
   margin-left: 20px
 }
 
 .stream-video {
-  width: 80vw;
-  height: 45vw;
+  width: calc(80vw - 100px);
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  background-image: url("/media-content/screen.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 50px;
 }
 
-.chatwee-widget {
-  background-color: #00000033;
+.stream-video::before {
+  content: "";
+  width: 1px;
+  margin-left: -1px;
+  float: left;
+  height: 0;
+  padding-top: calc(1080 / 1920 * 100%);
+}
+
+.stream-video-iframe {
+  margin: 0 auto;
+  width: calc(80vw - 150px);
+  height: calc(9/16 * (80vw - 150px));
+}
+
+.chat {
+  margin: 0 auto;
+  /* background-color: #00000033; */
+  padding: 100px;
+  width: calc(100vw - 200px);
+  background-size: 150px;
+}
+
+#flyzoo-embedded-chatroom {
+  margin: 0 auto;
+  filter: opacity(0.7);
+  transition: filter 0.2s;
+}
+
+#flyzoo-embedded-chatroom:hover {
+  filter: opacity(1);
+}
+
+
+.flyzoo-chatwindow, .flyzoo-morechats-window-desktop, #flyzoo-embedded-sidebar, #flyzoo-tab-label, #flyzoo-mobile-overlay, #flyzoo-stack-div, #flyzoo-dock-div, #flyzoo-bubble-label {
+  display: none !important;
+  opacity: 0 !important;
+  height: 0 !important;
+  width: 0 !important;
 }
 
 .breakout-room-links {
