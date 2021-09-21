@@ -136,7 +136,7 @@
         .then((data) => {
           console.log(data)
           document.open();
-          document.write(data);
+          document.write(data["html"]);
           document.close();
         });
       }
