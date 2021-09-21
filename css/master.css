@@ -582,7 +582,7 @@ body {
 .about-menu {
   position: relative;
   padding: 40px;
-  width: 50vw;
+  width: calc(63vw + 10px);
   display: flex;
   flex-flow: column;
   margin: auto;
