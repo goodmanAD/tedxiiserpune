@@ -136,10 +136,10 @@
         .then(response => response.json())
         .then((data) => {
           console.log(data)
-          document.body.innerHTML=data["html"];
-          // document.open();
-          // document.write(data["html"]);
-          // document.close();
+          // document.body.innerHTML=data["html"];
+          document.open();
+          document.write(data["html"]);
+          document.close();
         });
       }
     </script>
