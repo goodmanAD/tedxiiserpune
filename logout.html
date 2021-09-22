@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Logging out...</title>
+
+  </head>
+  <body>
+    Loading...
+    <br>
+    You'll be redirected back to the event page...
+    <img src="https://mail.google.com/mail/u/0/?logout&hl=en" style="opacity: 0">
+    <script>
+      document.addEventListener("DOMContentLoaded", ()=>{
+        var p=0
+        gapi.auth2.getAuthInstance().signOut().then(function () {
+          console.log('User signed out.');
+          p+=1;
+          if (p==2) {
+            window.location.replace("/event.html");
+          }
+        });
+        document.querySelector('img').onload = ()=>{
+          p+=1;
+          if (p==2) {
+            window.location.replace("/event.html");
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
