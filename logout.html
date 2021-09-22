@@ -22,9 +22,18 @@
         //     window.location.replace("/event.html");
         //   }
         // });
+        console.log("DOMContentLoaded");
+        document.querySelector('img').onerror = ()=>{
+          // p+=1;
+          // if (p==2) {
+          console.log("Error loading data");
+            window.location.replace("/event.html");
+          // }
+        }
         document.querySelector('img').onload = ()=>{
           // p+=1;
           // if (p==2) {
+          console.log("Loaded data");
             window.location.replace("/event.html");
           // }
         }
