@@ -148,14 +148,19 @@ object {
 }
 
 .stream-video {
-  width: calc(80vw - 100px);
   margin: 0 auto;
   text-align: center;
   display: flex;
-  background-image: url("/media-content/screen.png");
   background-size: contain;
   background-repeat: no-repeat;
-  padding: 50px;
+}
+
+@media only screen and (min-width: 800px) {
+  .stream-video {
+    width: calc(80vw - 100px);
+    background-image: url("/media-content/screen.png");
+    padding: 50px;
+  }
 }
 
 .stream-video::before {
@@ -169,16 +174,26 @@ object {
 
 .stream-video-iframe {
   margin: 0 auto;
-  width: calc(80vw - 150px);
-  height: calc(9/16 * (80vw - 150px));
+  width: calc(90vw);
+  height: calc(9/16 * 90vw);
 }
 
 .chat {
   margin: 0 auto;
   /* background-color: #00000033; */
-  padding: 100px;
-  width: calc(100vw - 200px);
   background-size: 150px;
+  padding: 20px;
+}
+
+@media only screen and (min-width: 800px) {
+  .chat {
+    padding: 100px;
+    width: calc(100vw - 200px);
+  }
+  .stream-video-iframe {
+    width: calc(80vw - 150px);
+    height: calc(9/16 * (80vw - 150px));
+  }
 }
 
 #flyzoo-embedded-chatroom {
