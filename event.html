@@ -117,7 +117,10 @@
     <script type="text/javascript">
       function onSignIn(googleUser) {
         var profile = googleUser.getBasicProfile();
-        document.querySelector(".login-text").innerHTML="Loading... please wait";
+        var text = document.querySelector(".login-text");
+        if (text) {
+          text.innerHTML="Loading... please wait";
+        }
         console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
         console.log('Name: ' + profile.getName());
         console.log('Image URL: ' + profile.getImageUrl());
@@ -140,29 +143,6 @@
           document.open();
           document.write(data["html"]);
           document.close();
-        });
-      }
-
-      function onSignInTwo(googleUser) {
-        var profile = googleUser.getBasicProfile();
-        console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-        console.log('Name: ' + profile.getName());
-        console.log('Image URL: ' + profile.getImageUrl());
-        console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
-        var id_token = googleUser.getAuthResponse().id_token;
-        console.log(id_token);
-        fetch("https://stormy-ocean-53371.herokuapp.com/", {
-          method: 'POST',
-          mode: 'cors',
-          headers: {
-            'Content-Type': 'text/plain'
-            // 'Content-Type': 'application/x-www-form-urlencoded',
-          },
-          body: JSON.stringify({"token": id_token})
-        })
-        .then(response => response.json())
-        .then((data) => {
-          console.log(data)
         });
       }
     </script>
