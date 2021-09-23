@@ -135,16 +135,13 @@
         })
         .then(response => response.json())
         .then((data) => {
-          // console.log(data)
-          // document.body.innerHTML=data["html"];
-          // window.document.dispatchEvent(new Event("DOMContentLoaded", {
-          //   bubbles: true,
-          //   cancelable: true
-          // }));
-          // drawPreloader()
-
-          document.body.innerHTML+='<iframe class="stream-video-iframe" src="https://www.youtube.com/embed/sshnVWwVX8I?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
-
+          console.log(data)
+          document.body.innerHTML=data["html"];
+          window.document.dispatchEvent(new Event("DOMContentLoaded", {
+            bubbles: true,
+            cancelable: true
+          }));
+          drawPreloader()
           // document.open();
           // document.write(data["html"]);
           // document.close();
