@@ -117,10 +117,7 @@
     <script type="text/javascript">
       function onSignIn(googleUser) {
         var profile = googleUser.getBasicProfile();
-        var text = document.querySelector(".login-text");
-        if (text) {
-          text.innerHTML="Loading... please wait";
-        }
+        document.querySelector(".login-text").innerHTML="Loading... please wait";
         console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
         console.log('Name: ' + profile.getName());
         console.log('Image URL: ' + profile.getImageUrl());
