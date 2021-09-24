@@ -159,7 +159,7 @@ object {
   .stream-video {
     width: calc(80vw - 100px);
     background-image: url("/media-content/screen.png");
-    padding: 50px;
+    padding: 50px 50px 25px 50px;
   }
 }
 
