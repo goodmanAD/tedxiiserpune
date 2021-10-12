@@ -1059,6 +1059,67 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+/* Previous events */
+
+.events {
+  margin-top: 100px;
+  padding: 0 100px;
+}
+
+.event > h2{
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  color: #555;
+}
+
+.event-description > h3, .core-team > h3 {
+  font-family: 'Poppins', sans-serif;
+  color: #444;
+}
+
+.event-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.event-description  {
+  flex-grow: 5;
+  flex-basis: 0;
+}
+
+.event-description > p {
+  font-family: 'Roboto', sans-serif;
+  color: #666;
+  font-size: 1.8rem;
+}
+
+.core-team {
+  flex-grow: 3;
+  flex-basis: 0;
+  margin-left: 20px
+}
+
+.core-team > ul {
+  margin-left: 0;
+  padding-left: 0;
+  font-size: 1.5rem;
+  font-family: 'Roboto', sans-serif;
+  color: #666;
+}
+
+.core-team b {
+  color: black
+}
+
+@media only screen and (min-width: 800px) {
+  .event-flex {
+    flex-direction: row;
+  }
+}
+
 /* Footer */
 
 footer {
